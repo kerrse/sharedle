@@ -65,7 +65,7 @@
 <script>
   document.getElementById("submit").addEventListener("click", function() {
     if (document.getElementById("word").value.length == 5) {
-      document.getElementById("link").value = "https://kerrse-sharedle.vercel.app" + "/sharedle.php?shared=" + btoa(document.getElementById("word").value.toLowerCase());
+      document.getElementById("link").value = "https://kerrse-sharedle.vercel.app" + "/sharedle.html?shared=" + btoa(document.getElementById("word").value.toLowerCase());
     } else {alert("Sorry. That's not 5 letters.");}
   })
 
