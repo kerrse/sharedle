@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+  <title>Sharedle</title>
+  <style>
+    body {
+      background-image: linear-gradient(-270deg, darkcyan, blueviolet);
+      color: black;
+      font-family: monospace, "Courier New";
+      font-size: 40px;
+    }
+
+    h1 {
+      font-size: 70px;
+      text-decoration: underline;
+    }
+
+    #entire_form {
+      text-align: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto auto auto auto;
+      background-color: darkgoldenrod;
+      border: 4px black solid;
+      height: 75vh;
+      width: 70vw;
+      overflow: scroll;
+    }
+
+    input[type="text"] {
+      border-radius: 5px;
+      font-size: 40px;
+    }
+
+    input[type="submit"] {
+      font-size: 20px;
+      vertical-align: middle;
+    }
+
+    input[type="submit"]:hover {
+      box-shadow: 3px 3px;
+    }
+  </style>
+</head>
+<body>
+  <div id="entire_form">
+    <h1>Sharedle Creator</h1>
+      <br/>
+    <label for="shared">Word:</label>
+    <input type="text" name="shared" id="word" maxlength="5" autofocus/>
+    <input type="submit" id="submit" value="Create!"/>
+      <br/>
+      <br/>
+      <br/>
+    <label for="link">Link:</label>
+    <input type="text" id="link"/>
+    <input type="submit" id="copy" value="Copy"/>
+  </div>
+</body>
+<script>
+  document.getElementById("submit").addEventListener("click", function() {
+    if (document.getElementById("word").value.length == 5) {
+      document.getElementById("link").value = "https://kerrse-sharedle.vercel.app" + "/sharedle.php?shared=" + btoa(document.getElementById("word").value.toLowerCase());
+    } else {alert("Sorry. That's not 5 letters.");}
+  })
+
+  document.getElementById("copy").addEventListener("click", function() {
+    document.getElementById("link").select();
+    document.execCommand("copy");
+  })
+</script>
+</html>

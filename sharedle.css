@@ -1,0 +1,120 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+#name {
+  font-size: 55px;
+  color: black;
+  position: relative;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 10px;
+}
+
+.rows {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 10px;
+}
+
+#keyboard {
+  text-align: center;
+  grid-template-columns: auto;
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+#top_row {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  grid-column-gap: 7px;
+}
+
+#middle_row {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+  grid-column-gap: 7px;
+}
+
+#bottom_row {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  grid-column-gap: 7px;
+}
+
+.keys {
+  border: black solid 1.5px;
+  background-color: silver;
+  border-radius: 10px;
+  height: 150px;
+}
+
+button {
+  font-size: 30px;
+  height: 100%;
+  background-color: silver;
+  border: none;
+  color: white;
+  touch-action: manipulation;
+}
+
+.spots {
+  height: 25px;
+  width: 25px;
+  border: solid grey 1px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#popup {
+  position: fixed;
+  display: none;
+  background-color: lightgrey;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  text-align: center;
+  width: 75%;
+  height: 50%;
+  top: 25%;
+  border-radius: 20px;
+  color: black;
+}
+
+#btn {
+  position: absolute;
+  font-size: 30px;
+  color: black;
+  height: 40%;
+  width: 40%;
+  background-color: steelblue;
+  border: none;
+  border-radius: 20px;
+  bottom: 10px;
+  right: 10px;
+}
+
+#correct_answer {
+  position: absolute;
+  top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  font-size: 30px;
+}

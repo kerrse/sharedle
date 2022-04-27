@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+  <title>Sharedle</title>
+  <link href="sharedle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <h1 id="name">Sharedle</h1>
+
+  <div id="container">
+    <div class="grid">
+      <div class="rows" id="row_1">
+        <div class="spots spots_1"></div>
+        <div class="spots spots_1"></div>
+        <div class="spots spots_1"></div>
+        <div class="spots spots_1"></div>
+        <div class="spots spots_1"></div>
+      </div>
+      <div class="rows" id="row_2">
+        <div class="spots spots_2"></div>
+        <div class="spots spots_2"></div>
+        <div class="spots spots_2"></div>
+        <div class="spots spots_2"></div>
+        <div class="spots spots_2"></div>
+      </div>
+      <div class="rows" id="row_3">
+        <div class="spots spots_3"></div>
+        <div class="spots spots_3"></div>
+        <div class="spots spots_3"></div>
+        <div class="spots spots_3"></div>
+        <div class="spots spots_3"></div>
+      </div>
+      <div class="rows" id="row_4">
+        <div class="spots spots_4"></div>
+        <div class="spots spots_4"></div>
+        <div class="spots spots_4"></div>
+        <div class="spots spots_4"></div>
+        <div class="spots spots_4"></div>
+      </div>
+      <div class="rows" id="row_5">
+        <div class="spots spots_5"></div>
+        <div class="spots spots_5"></div>
+        <div class="spots spots_5"></div>
+        <div class="spots spots_5"></div>
+        <div class="spots spots_5"></div>
+      </div>
+      <div class="rows" id="row_6">
+        <div class="spots spots_6"></div>
+        <div class="spots spots_6"></div>
+        <div class="spots spots_6"></div>
+        <div class="spots spots_6"></div>
+        <div class="spots spots_6"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup">
+    <span id="correct_answer" style="display:inline; color:black;"></span>
+    <button id="btn">Home</button>
+    </div>
+  </div>
+
+  <div id="keyboard">
+    <div id="top_row">
+      <div class="keys"><button class="btns">Q</button></div>
+      <div class="keys"><button class="btns">W</button></div>
+      <div class="keys"><button class="btns">E</button></div>
+      <div class="keys"><button class="btns">R</button></div>
+      <div class="keys"><button class="btns">T</button></div>
+      <div class="keys"><button class="btns">Y</button></div>
+      <div class="keys"><button class="btns">U</button></div>
+      <div class="keys"><button class="btns">I</button></div>
+      <div class="keys"><button class="btns">O</button></div>
+      <div class="keys"><button class="btns">P</button></div>
+    </div>
+
+    <div id="middle_row">
+      <div class="keys empty" style="background-color:transparent; border:none;"></div>
+      <div class="keys"><button class="btns">A</button></div>
+      <div class="keys"><button class="btns">S</button></div>
+      <div class="keys"><button class="btns">D</button></div>
+      <div class="keys"><button class="btns">F</button></div>
+      <div class="keys"><button class="btns">G</button></div>
+      <div class="keys"><button class="btns">H</button></div>
+      <div class="keys"><button class="btns">J</button></div>
+      <div class="keys"><button class="btns">K</button></div>
+      <div class="keys"><button class="btns">L</button></div>
+      <div class="keys empty" style="background-color:transparent; border:none;"></div>
+    </div>
+
+    <div id="bottom_row">
+      <div class="keys" id="enter"><button class="btns">ENTER</button></div>
+      <div class="keys"><button class="btns">Z</button></div>
+      <div class="keys"><button class="btns">X</button></div>
+      <div class="keys"><button class="btns">C</button></div>
+      <div class="keys"><button class="btns">V</button></div>
+      <div class="keys"><button class="btns">B</button></div>
+      <div class="keys"><button class="btns">N</button></div>
+      <div class="keys"><button class="btns">M</button></div>
+      <div class="keys" id="delete"><button class="btns">BACK</button></div>
+    </div>
+  </div>
+
+<script>
+  const encoded = window.location.search;
+  const urlParameter = new URLSearchParams(encoded);
+  const answer = atob(urlParameter.get("shared"));
+</script>
+
+</body>
+<script src="sharedle.js"></script>
+</html>
